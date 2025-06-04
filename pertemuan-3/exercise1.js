@@ -4,11 +4,11 @@
 // menghitung bmi (body mass index)
 
 // // iife
-// let output1 = (function (weight, height) {
+// let output = (function (weight, height) {
 //     return "Your BMI is " + (weight/(height*height))
 // })(50, 1.6);
 
-// console.log(output1);
+// console.log(output);
 
 // callback function
 function calculateBMI(data) {
