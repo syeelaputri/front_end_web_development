@@ -1,9 +1,8 @@
 // rabu, 4 juni 2025
 // 1
 
-// js function
-
-// // 1. function declaration
+// 4 JAVASCRIPT FUNCTION
+// declaration (fungsi berdiri sendiri)
 // version 1
 // function sayHello(fullName){
 //     console.log("Hello " + fullName)
@@ -19,8 +18,8 @@ function sayHello(fullName){
 let output = sayHello("John"); // call/invoke
 console.log(output);
 
-// 2. function expression
-// // version 1
+// expression (fungsi disimpan dalam variabel)
+// version 1
 // let sayHello2 = function(fullName) {
 //     console.log("Hello " + fullName)
 // };
@@ -35,29 +34,39 @@ let sayHello2 = function(fullName) {
 let output2 = sayHello2("Bob"); // call/invoke
 console.log(output2);
 
-// 3. iife (immediately invoked function expression) = self-executing anonymous function
+// iife (immediately invoked function expression) (fungsi anonim yang dapat langsung dijalankan)
 // version 1
-(function (fullName) { // anonymous function karena tidak ada nama fungsi
-    console.log("Hello " + fullName) // version 1
-    return "Hello " + fullName; // version 2
-})("Iife");
+// (function (fullName) { // anonymous function
+//     console.log("Hello " + fullName)
+// })("IIFE");
 
-// 4. callback function = a function passed as an argument to another function
-function sayHello3(callback){
-    callback()
-};
+// version 2
+let output3 = (function (fullName) {
+    return "Hello " + fullName
+})("IIFE 1");
 
-// 2 cara taruh function sebagai argumen
-// pertama
-function hello() {
-    console.log("Hello Callback");
-};
+console.log(output3);
 
-sayHello3(hello);
+// callback function (fungsi yang dikirim sebagai argumen ke fungsi lain)
+// version 1
+// function sayHello3(callback){
+//     callback()
+// };
 
-// kedua
-sayHello3(function () {
-console.log("Hello Callback")
+// function hello() {
+//     console.log("Hello Callback");
+// };
+
+// sayHello3(hello);
+
+// version 2
+function sayHello3(callback) {
+  let result = callback("Callback 1");
+  return result;
+}
+
+let output4 = sayHello3(function (fullName) {
+  return "Hello " + fullName;
 });
 
-// note: serapi
+console.log(output4);
