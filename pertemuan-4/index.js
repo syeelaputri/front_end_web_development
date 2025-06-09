@@ -131,7 +131,7 @@ students1.forEach(function(item) {
     console.log(item.name);
 });
 
-// cara 3 (map) -recommended juga
+// cara 3 (map) -recommended juga // map bisa return dan buat array baru
 let output = students1.map(function(item) {
     return item.name;
 });
