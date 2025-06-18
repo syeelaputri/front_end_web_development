@@ -1,11 +1,11 @@
 import Logo from "./Logo.js";
 import Generations from "./Generations.js";
 
-const Header = () => {
+const Header = ({ handleClick }) => {
   return (
     <>
       <h1>Header</h1>
-      <Logo />
+      <Logo handleClick={handleClick} />
       <Generations />
     </>
   );
